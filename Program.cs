@@ -3,7 +3,7 @@ using Fz.Tool.Cli;
 using System.CommandLine;
 
 // 定义根命令
-var rootCommand = new RootCommand("fztool - 项目管理工具");
+var rootCommand = new RootCommand("mstool - 项目管理工具");
 // 定义子命令 "new"
 var newCommand = new Command("new", "创建新项目");
 rootCommand.Add(newCommand);
@@ -11,7 +11,7 @@ rootCommand.Add(newCommand);
 // 定义选项和参数
 var repoOption = new Option<string>(
 	["--repo", "-r"], // 支持长选项 --repo 和短选项 -r
-	() => "http://192.168.11.6:10080/maoshuai/Fz.DDD.Template.git", // 默认值
+	() => "https://github.com/MarsonShine/Template.git", // 默认值
 	"Git 仓库模板的 URL"
 );
 var projectNameArg = new Argument<string>(
